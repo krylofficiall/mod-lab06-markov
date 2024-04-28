@@ -58,12 +58,10 @@ std::string TextGen::generate(int number, unsigned int time_num) {
                 intel += suf[index] + ' ';
                 pre.pop_front();
                 pre.push_back(suf[index]);
-            }
-            else {
+            } else {
                 break;
             }
-        }
-        else {
+        } else {
             break;
         }
     }
