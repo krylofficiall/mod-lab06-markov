@@ -22,8 +22,8 @@ void TextGen::create_tab(const std::string& text, int number) {
         }
     }
 
-    f.push_back(word[0]);
-    f.push_back(word[1]);
+    first.push_back(word[0]);
+    first.push_back(word[1]);
     for (int i = 0; i < word.size() - number; i++) {
         prefix pref;
         for (int j = 0; j < number; j++) {
@@ -36,7 +36,7 @@ void TextGen::create_tab(const std::string& text, int number) {
 std::string TextGen::generate(int number, unsigned int time_num) {
     prefix pre;
     std::string intel;
-    pre = f;
+    pre = first;
 
     for (const std::string& elem : pre) {
         intel += elem + ' ';
@@ -58,10 +58,12 @@ std::string TextGen::generate(int number, unsigned int time_num) {
                 intel += suf[index] + ' ';
                 pre.pop_front();
                 pre.push_back(suf[index]);
-            } else {
+            }
+            else {
                 break;
             }
-        } else {
+        }
+        else {
             break;
         }
     }
@@ -78,6 +80,6 @@ void TextGen::StateTable(
 
     if (!tab_state.empty()) {
         auto item = tab_state.begin();
-        f = item->f;
+        first = item -> first;
     }
 }
