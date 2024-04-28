@@ -8,7 +8,7 @@ TEST(test1, pref) {
   prefix pref = {"Fresh", "red"};
   textgen.create_tab(words, 2);
   EXPECT_EQ(textgen.tab_state.find(pref),
-  textgen.statetab.end());
+  textgen.tab_state.end());
 }
 
 TEST(test3, suf) {
