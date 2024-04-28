@@ -8,7 +8,7 @@
 
 typedef std::deque<std::string> prefix;
 class TextGen {
-public:
+ public:
     std::map<prefix, std::vector<std::string> > tab_state;
     prefix f;
     void StateTable(
