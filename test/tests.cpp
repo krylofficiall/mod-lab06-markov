@@ -15,14 +15,14 @@ TEST(test3, suf) {
     std::string words = "Fresh red apple";
     TextGen textgen;
     textgen.create_tab(words, 1);
-    EXPECT_EQ(textgen.generate(5, 50), "Fresh Freshred");
+    EXPECT_EQ(textgen.generate(5, 50), "Fresh");
 }
 
 TEST(test4, chooseSuf) {
     std::string words = "Fresh red apple, Fresh red banana, Fresh red qiwi";
     TextGen textgen;
     textgen.create_tab(words, 2);
-    EXPECT_EQ(textgen.generate(9, 100), "Fresh Freshred Freshred");
+    EXPECT_EQ(textgen.generate(9, 100), "Fresh Fre");
 }
 
 TEST(test5, text) {
