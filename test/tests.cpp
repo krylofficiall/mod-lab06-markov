@@ -36,6 +36,6 @@ TEST(test5, text) {
     typedef std::deque<std::string> prefix;
     prefix pref{ "d" };
     textgen.tab_state = state;
-    textgen.f = pref;
+    textgen.first = pref;
     EXPECT_EQ(textgen.generate(10, 10), "d D ");
 }
